@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <link rel="shortcut icon" href="src/images/restaurante.png" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Gellati Pizzaria&Sorveteria Website</title>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <i class="fa-solid fa-pizza" id="nav_logo">Gellati</i>
+
+            <ul id="nav_list">
+                <li class="nav-item active">
+                    <a href="#home">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu">Cardápio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#testimonials">Avaliações</a>
+                </li>
+            </ul>
+
+            <button class="btn-default">
+                Peça aqui
+            </button>
+
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item">
+                    <a href="#home">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu">Cardápio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#testimonials">Avaliações</a>
+                </li>
+            </ul>
+
+            <a href="https://wa.me/5506232061858">
+            <button class="btn-default" onclick="window.open('https://wa.me/5506232061858', '_blank')"></button>
+                Peça aqui
+            </button>
+        </a>
+        </div>
+    </header>
+
+    <main id="content">
+        <section id="home">
+            <div class="shape"></div>
+            <div id="cta">
+                <h1 class="title">
+                    O sabor que vai até
+                    <span>você</span>
+                </h1>
+
+                <p class="description">
+                    Pizzas variadas tradicionais e 
+                    sorvetes naturais em espaço familiar 
+                    despretensioso com área externa e coberta. Temos Ifood e fazemos entrega entre em contato.
+                </p>
+
+                <div id="cta_buttons">
+                    <a href="#menu" class="btn-default">
+                        Ver cardápio
+                    </a>
+
+                    <a href="https://contacts.google.com/new" id="phone_button">
+                        <button class="btn-default">
+                            <i class="fa-solid fa-phone"></i>
+                        </button>
+                        (62) 3206-1858
+                    </a>
+                </div>
+
+                <div class="social-media-buttons">
+                    <a href="https://wa.me/5506232061858">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                    <a href="https://maps.app.goo.gl/j9J3GYyuoeJyJDm77">
+                        <i class="fa fa-map-marker"></i>
+                    </a>
+
+                    <a href="https://www.ifood.com.br/delivery/goiania-go/gelatti-pizza-sanduiche-sorvete-e-acai-jardim-novo-mundo/1017b59b-504b-402f-9e75-0330dfbd4cf9?utm_medium=ReserveGoogle">
+                        <i class="fa fa-motorcycle"></i>
+                    </a>
+                    
+                   
+                </div>
+            </div>
+
+            <div id="banner">
+                <img src="src/images/açai3-removebg-preview.png" alt="">
+            </div>
+        </section>
+
+        <section id="menu">
+            <h2 class="section-title">Cardápio</h2>
+            <h3 class="section-subtitle">Nossos pratos especiais</h3>
+
+            <div id="dishes">
+                <div class="dish">
+                    <div class="dish-heart">
+                        <i class="fa-solid fa-heart" ></i>
+                    </div>
+
+                    <img src="src/images/pizzaf-removebg-preview.png" class="dish-image" alt="">
+
+                    <h3 class="dish-title">
+                        Pizza Frango Catupiry
+                    </h3>
+
+                    <span class="dish-description">
+                       Uma exelente pizza de frango Catupiry muito boa e uma das mais pedidas
+                    </span>
+
+                    <div class="dish-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(500+)</span>
+                    </div>
+
+                    <div class="dish-price">
+                        <h4>$$</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dish">
+                    <div class="dish-heart" onclick="toggleLike(this)">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/images/acai-removebg-preview.png" class="dish-image" alt="">
+
+                    <h3 class="dish-title">
+                        Barca de Açaí
+                    </h3>
+
+                    <span class="dish-description">
+                        ( imagem ilustrativa ) Vem com pasta de açaí, banana, doce amorinha, uvas-passas, paçoca, leite ninho,
+                        granola, rocklets, leite condensado. (morango se for época)
+                    </span>
+
+                    <div class="dish-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(500+)</span>
+                    </div>
+
+                    <div class="dish-price">
+                        <h4>$$</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dish">
+                    <div class="dish-heart" onclick="toggleLike(this)">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/images/ovomaltine-removebg-preview.png" class="dish-image" alt="">
+
+                    <h3 class="dish-title">
+                        MilkShake Ovomaltine
+                    </h3>
+
+                    <span class="dish-description">
+                        Copo de 500ml, 02 bolas de sorvetes, sabores: chocolate ou creme 
+                        com cobertura de morango e chocolate.
+                    </span>
+
+                    <div class="dish-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(500+)</span>
+                    </div>
+
+                    <div class="dish-price">
+                        <h4>$$</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dish">
+                    <div class="dish-heart" onclick="toggleLike(this)">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/images/pizzademerda.png" class="dish-image" alt="">
+
+                    <h3 class="dish-title">
+                        Pizza De Calabresa
+                    </h3>
+
+                    <span class="dish-description">
+                        A pizza de calabresa é popular aqui na gellati, é muito boa e macia!
+                    </span>
+
+                    <div class="dish-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(500+)</span>
+                    </div>
+
+                    <div class="dish-price">
+                        <h4>$$</h4>
+                        <button class="btn-default">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <img src="src/images/papaiote-removebg-preview.png" id="testimonial_chef" alt="">
+
+            <div id="testimonials_content">
+                <h2 class="section-title">
+                    Depoimentos
+                </h2>
+                <h3 class="section-subtitle">
+                    O que os clientes falam sobre nós
+                </h3>
+
+                <div id="feedbacks">
+                    <div class="feedback">
+                        <img src="src/images/vovotoin.png" class="feedback-avatar" alt="">
+
+                        <div class="feedback-content">
+                            <p>
+                                Vovô Toin Toin 
+                                <span>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                            </p>
+                            <p>
+                                "É muito boa essa gellati, só a pizza que o Davi e a Tia Miriane pede 
+                                é muito cara $$!"
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="feedback">
+                        <img src="src/images/pepe1-removebg-preview.png" class="feedback-avatar" alt="">
+
+                        <div class="feedback-content">
+                            <p>
+                                Pepe
+                                <span>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                            </p>
+                            <p>
+                                "UHUUUUUUUUUHUUUUUUUUUU, essa Gellati é muito boa pra rapelar uns açaí!"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://www.google.com/maps/place/Gelatti/@-16.6730357,-49.2169386,17z/data=!4m8!3m7!1s0x935ef1ef07ff71fb:0x8e24b8f63d81f62!8m2!3d-16.6730357!4d-49.2169386!9m1!1b1!16s%2Fg%2F1tppt172?authuser=0&entry=ttu&g_ep=EgoyMDI0MTEwNi4wIKXMDSoASAFQAw%3D%3D">
+                <button class="btn-default">
+                    Ver mais avaliações
+                </button>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <img src="src/images/wave.svg" alt="">
+
+        <div id="footer_items">
+            <a href="https://daviyoungprogrammer.github.io/davi-website/">
+            <span id="copyright">
+                &copy 2024 Davi Lopes                        
+                
+            </span>
+            
+           </a>
+           
+    </footer>
+    <script src="src/javascript/script.js"></script>
+</body>
+</html>
